@@ -1,6 +1,6 @@
 GPU_ID=0
 DISPLAY_ID=$((GPU_ID*5+7))
-python ./train.py \
+nohup python3 ./train.py \
   --dataroot  /home/quinn/datasets/summer2winter_yosemite \
   --checkpoints_dir /home/quinn/Documents/models/DMIT/summer2winter/checkpoints \
   --exp_name dmit_season_transfer \
@@ -17,7 +17,7 @@ python ./train.py \
   --n_style 8 \
   --batch_size 1 \
   --is_flip \
-  --use_dropout
+  --use_dropout > summer2winter.log 2> err.log & 
 
   
 

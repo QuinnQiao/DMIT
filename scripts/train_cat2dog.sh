@@ -1,6 +1,6 @@
 GPU_ID=1
 DISPLAY_ID=$((GPU_ID*5+7))
-python ./train.py \
+python3 ./train.py \
   --dataroot  /home/quinn/datasets/cat2dog \
   --checkpoints_dir /home/quinn/Documents/models/DMIT/cat2dog/checkpoints \
   --exp_name dmit_cat2dog \
@@ -11,8 +11,8 @@ python ./train.py \
   --save_epoch_freq 25 \
   --niter 100 \
   --niter_decay 100 \
-  --load_size 286 \
-  --fine_size 256 \
+  --load_size 196 \
+  --fine_size 176 \
   --n_attribute 2 \
   --n_style 8 \
   --batch_size 1 \
