@@ -1,10 +1,10 @@
-GPU_ID=0
+GPU_ID=1
 DISPLAY_ID=$((GPU_ID*5+7))
 python ./train.py \
-  --dataroot  /home/quinn/datasets/summer2winter_yosemite \
-  --checkpoints_dir /home/quinn/Documents/models/DMIT/summer2winter/checkpoints \
-  --exp_name dmit_season_transfer \
-  --model_name season_transfer \
+  --dataroot  /home/quinn/datasets/cat2dog \
+  --checkpoints_dir /home/quinn/Documents/models/DMIT/cat2dog/checkpoints \
+  --exp_name dmit_cat2dog \
+  --model_name cat2dog \
   --gpu ${GPU_ID} \
   --display_id ${DISPLAY_ID} \
   --display_port 8033 \

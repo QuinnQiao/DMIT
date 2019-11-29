@@ -24,8 +24,8 @@ class TrainOptions(BaseOptions):
         self.parser.add_argument('--continue_train', action='store_true', help='continue training: load the latest model')
         # lambda parameters
         ## optional parameters
-        self.parser.add_argument('--lambda_cyc', type=float, default=10, help='weight for cycle consistency (It is not required, but it can improve training stability)')
-        self.parser.add_argument('--lambda_div', type=float, default=0.05, help='weight for diversity regulazation (It is not required, but it can improve the visual diversity)')
+        self.parser.add_argument('--lambda_cyc', type=float, default=0., help='weight for cycle consistency (It is not required, but it can improve training stability)')
+        self.parser.add_argument('--lambda_div', type=float, default=0., help='weight for diversity regulazation (It is not required, but it can improve the visual diversity)')
         ## requisite parameters
         self.parser.add_argument('--lambda_style', type=float, default=1, help='weight for reconstruction of style')
         self.parser.add_argument('--lambda_content', type=float, default=1, help='weight for reconstruction of content')
